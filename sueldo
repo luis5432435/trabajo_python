@@ -1,0 +1,29 @@
+# Solicita el número de empleados
+n = int(input("Cuántos empleados tiene la empresa: "))
+
+# Inicializa las variables
+x = 1
+conta1 = 0  # Contador para empleados que cobran entre $1,000,000 y $3,000,000
+conta2 = 0  # Contador para empleados que cobran más de $3,000,000
+total_sueldos = 0  # Acumulador para el total de sueldos
+
+# Bucle para ingresar los sueldos de cada empleado
+while x <= n:
+    sueldo = float(input(f"Ingrese el sueldo del empleado {x}: "))
+
+    # Verifica el rango del sueldo y actualiza los contadores
+    if 1000000 <= sueldo <= 3000000:
+        conta1 += 1
+    elif sueldo > 3000000:
+        conta2 += 1
+    
+    # Suma el sueldo al total
+    total_sueldos += sueldo
+    
+    # Incrementa el contador de empleados procesados
+    x += 1
+
+# Muestra los resultados
+print(f"\nEmpleados que cobran entre $1,000,000 y $3,000,000: {conta1}")
+print(f"Empleados que cobran más de $3,000,000: {conta2}")
+print(f"Total que gasta la empresa en sueldos: ${total_sueldos}")

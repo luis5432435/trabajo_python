@@ -1,0 +1,12 @@
+# Solicita al usuario un número positivo de uno a tres dígitos
+numero = int(input("Ingrese un número positivo (1..999): "))
+
+# Verifica la cantidad de dígitos
+if 1 <= numero <= 9:
+    print("El número tiene un dígito.")
+elif 10 <= numero <= 99:
+    print("El número tiene dos dígitos.")
+elif 100 <= numero <= 999:
+    print("El número tiene tres dígitos.")
+else:
+    print("Número fuera del rango especificado (1..999).")
